@@ -4507,7 +4507,7 @@ gsi::Enum<db::metrics_type> decl_Metrics ("db", "Metrics",
     "measured perpendicular to one edge. That implies that the distance is defined only where two "
     "edges have a non-vanishing projection onto each other."
   ),
-  "@brief This class represents the metrics type for \\Region#width and related checks.\n"
+  "@brief This class represents the metrics type for \\Region#width_check and related checks.\n"
   "\n"
   "This enum has been introduced in version 0.27."
 );
@@ -4584,7 +4584,7 @@ gsi::Enum<db::zero_distance_mode> decl_ZeroDistanceMode ("db", "ZeroDistanceMode
     "With this specification, the check functions will also check edges which are collinear and share more than a single point. "
     "This is the mode that excludes the 'kissing corner' cases."
   ),
-  "@brief This class represents the zero_distance_mode type for \\Region#width and related checks.\n"
+  "@brief This class represents the zero_distance_mode type for \\Region#width_check and related checks.\n"
   "This mode determines how edges with zero distance are treated in the DRC checks. Formally these edges do neither represent "
   "a space other other relation as they do not face each other. There are three modes available to treat this boundary case: "
   "Ignore such edges (\\NeverIncludeZeroDistance) or only include them "
@@ -4661,7 +4661,7 @@ gsi::EnumIn<db::Region, db::RectFilter> decl_RectFilter ("db", "RectFilter",
   gsi::enum_const ("FourSidesAllowed", db::RectFilter::FourSidesAllowed,
     "@brief Allow errors when on all sides"
   ),
-  "@brief This class represents the error filter mode on rectangles for \\Region#separation and related checks.\n"
+  "@brief This class represents the error filter mode on rectangles for \\Region#separation_check and related checks.\n"
   "\n"
   "This enum has been introduced in version 0.27."
 );
@@ -4679,7 +4679,7 @@ gsi::EnumIn<db::Region, db::OppositeFilter> decl_OppositeFilter ("db", "Opposite
   gsi::enum_const ("NotOpposite", db::OppositeFilter::NotOpposite,
     "@brief Only errors NOT appearing on opposite sides of a figure will be reported\n"
   ),
-  "@brief This class represents the opposite error filter mode for \\Region#separation and related checks.\n"
+  "@brief This class represents the opposite error filter mode for \\Region#separation_check and related checks.\n"
   "\n"
   "This enum has been introduced in version 0.27."
 );

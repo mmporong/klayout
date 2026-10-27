@@ -396,7 +396,7 @@ gsi::Class<db::Technology> technology_decl ("db", "Technology",
     "@brief Loads the technology from a XML representation\n"
     "\n"
     "See \\technology_to_xml for details. Note that this function will create "
-    "a new Technology object which is not registered in the system. See \\Technology#register for details."
+    "a new Technology object which is not registered in the system. See \\Technology#register_technology for details."
   ) +
   gsi::method_ext ("component_names", &get_component_names,
     "@brief Gets the names of all components available for \\component"
@@ -424,7 +424,7 @@ gsi::Class<db::Technology> technology_decl ("db", "Technology",
   "@/code\n"
   "\n"
   "Note that in the latter example, an exception will be thrown if a technology with the same "
-  "name already exists. Also note, that \\Technology#register will register a copy of the "
+  "name already exists. Also note, that \\Technology#register_technology will register a copy of the "
   "object, so modifying it after registration will not have any effect.\n"
   "\n"
   "The Technology class has been introduced in version 0.25.\n"
